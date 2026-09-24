@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talíř plný barev – web o zdravém jídle</title>
+  <meta name="description" content="Jednoduché recepty a tipy pro zdravé jídlo každý den.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top">Talíř plný barev</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" class="nav">
+      <a href="#talir">Jak vypadá talíř</a>
+      <a href="#recepty">Recepty</a>
+      <a href="#newsletter">Odběr novinek</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Jez barevně. Vař jednoduše.</h1>
+        <p>Recepty na každý den, které zvládneš za půl hodiny a které chutnají jako radost, ne jako dieta.</p>
+        <a class="btn" href="#recepty">Vybrat recept</a>
+      </div>
+      <div class="plate" role="img" aria-label="Talíř: polovina zelenina a ovoce, čtvrtina bílkoviny, čtvrtina celozrnné přílohy"></div>
+    </section>
+
+    <section id="talir" class="section">
+      <h2>Jak vypadá zdravý talíř</h2>
+      <p class="lead">Nemusíš nic vážit. Stačí si talíř v duchu rozdělit.</p>
+      <div class="plate-rules">
+        <article class="rule rule-veg"><h3>Půlka: zelenina a ovoce</h3><p>Čím víc barev, tím víc vitamínů. Klidně mražené.</p></article>
+        <article class="rule rule-protein"><h3>Čtvrtina: bílkoviny</h3><p>Luštěniny, ryby, vejce, drůbež nebo tofu.</p></article>
+        <article class="rule rule-grain"><h3>Čtvrtina: celozrnné přílohy</h3><p>Ovesné vločky, hnědá rýže, celozrnný chléb.</p></article>
+      </div>
+    </section>
+
+    <section id="recepty" class="section">
+      <h2>Recepty</h2>
+      <div class="filters" role="group" aria-label="Filtr receptů">
+        <button class="chip is-active" data-filter="all">Všechny</button>
+        <button class="chip" data-filter="snidane">Snídaně</button>
+        <button class="chip" data-filter="obed">Obědy</button>
+        <button class="chip" data-filter="vecere">Večeře</button>
+      </div>
+      <div class="recipes">
+        <article class="recipe" data-cat="snidane"><h3>Ovesná kaše s jablkem</h3><p>Vločky, jablko, skořice a lžíce arašídového másla.</p><span class="time">10 minut</span></article>
+        <article class="recipe" data-cat="snidane"><h3>Míchaná vejce se špenátem</h3><p>Rychlá snídaně s bílkovinami a železem.</p><span class="time">10 minut</span></article>
+        <article class="recipe" data-cat="obed"><h3>Salát s cizrnou a fetou</h3><p>Cizrna, okurka, rajče, červená cibule a citron.</p><span class="time">15 minut</span></article>
+        <article class="recipe" data-cat="obed"><h3>Čočková polévka</h3><p>Červená čočka, mrkev a kurkuma. Vydrží 3 dny v lednici.</p><span class="time">25 minut</span></article>
+        <article class="recipe" data-cat="vecere"><h3>Pečený losos s brokolicí</h3><p>Vše na jednom plechu, žádné zbytečné mytí.</p><span class="time">25 minut</span></article>
+        <article class="recipe" data-cat="vecere"><h3>Zeleninové kari s rýží</h3><p>Kokosové mléko, dýně, špenát a hnědá rýže.</p><span class="time">30 minut</span></article>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section news">
+      <h2>Jeden nový recept týdně</h2>
+      <p class="lead">Pošleme ti ho na e-mail. Odhlásit se můžeš kdykoliv.</p>
+      <form id="news-form" novalidate>
+        <label for="email">Tvůj e-mail</label>
+        <div class="row">
+          <input id="email" type="email" placeholder="jmeno@email.cz" required>
+          <button class="btn" type="submit">Přihlásit se</button>
+        </div>
+        <p id="form-msg" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Talíř plný barev. Informace na webu nenahrazují radu lékaře nebo nutričního terapeuta.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
